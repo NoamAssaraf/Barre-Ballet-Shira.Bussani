@@ -567,46 +567,60 @@
   <h2 style="font-size:17px; margin-bottom:1mm;">עמדות המוצא</h2>
   <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4mm; text-transform:uppercase;">Positions of the Feet</p>
 
-  <!-- Parallel / 6th -->
-  <div class="movement-entry">
-    <div class="move-title">עמדה מקבילה (Parallel / Sixth Position) <span class="move-en">– Parallel</span></div>
-    <p><strong>תיאור:</strong> שתי הרגליים מקבילות ורחבות רוחב אגן. אצבעות הרגליים מצביעות ישר קדימה, הברכיים מיושרות מעל האצבעות הקטנות. זוהי עמדת הבסיס של ה-Barre והמחול המודרני.</p>
-    <p><strong>שימוש ב-Barre:</strong> מקדוח הישבן, Squats מקבילים, חימום, עבודת ירך פנימית.</p>
-    <div class="cue-line">💬 "רגליים מקבילות ורחבות כרוחב האגן – לא פנימה, לא החוצה"</div>
+  <!-- Full-height container for all 3 positions -->
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+
+    <!-- Row 1: Parallel (Photo Right, Text Left) -->
+    <div style="flex:1; display:flex; flex-direction:row-reverse; align-items:center; gap:5mm;">
+      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:36mm; margin-bottom:0;" id="ph-parallel" onclick="document.getElementById('ph-parallel-input').click()">
+        <div class="ph-icon">📷</div>
+        <div class="ph-label">תמונה: Parallel Position</div>
+        <input type="file" id="ph-parallel-input" accept="image/*" onchange="loadPhoto(this,'ph-parallel')">
+      </div>
+      <div class="movement-entry" style="flex:1; margin-bottom:0;">
+        <div class="move-title">עמדה מקבילה (Parallel / Sixth Position) <span class="move-en">– Parallel</span></div>
+        <p><strong>תיאור:</strong> שתי הרגליים מקבילות ורחבות רוחב אגן. אצבעות הרגליים מצביעות ישר קדימה, הברכיים מיושרות מעל האצבעות הקטנות. זוהי עמדת הבסיס של ה-Barre והמחול המודרני.</p>
+        <p><strong>שימוש ב-Barre:</strong> מקדוח הישבן, Squats מקבילים, חימום, עבודת ירך פנימית.</p>
+        <div class="cue-line">💬 "רגליים מקבילות ורחבות כרוחב האגן – לא פנימה, לא החוצה"</div>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin:2.5mm 0;">
+
+    <!-- Row 2: 1st Position (Photo Left, Text Right) -->
+    <div style="flex:1; display:flex; align-items:center; gap:5mm;">
+      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:36mm; margin-bottom:0;" id="ph-first" onclick="document.getElementById('ph-first-input').click()">
+        <div class="ph-icon">📷</div>
+        <div class="ph-label">תמונה: First Position</div>
+        <input type="file" id="ph-first-input" accept="image/*" onchange="loadPhoto(this,'ph-first')">
+      </div>
+      <div class="movement-entry" style="flex:1; margin-bottom:0;">
+        <div class="move-title">עמדה ראשונה <span class="move-en">– First Position (1ère)</span></div>
+        <p><strong>תיאור:</strong> עקבות צמודות, אצבעות פתוחות ב-45°–90° לכל צד (סיבוב מהירך). הרגליים יוצרות ביחד צורת V. זוהי עמדת הבסיס הקלאסית של הבלט.</p>
+        <p><strong>שימוש ב-Barre:</strong> Plié ראשון, Tendu, Relevé, Rond de Jambe.</p>
+        <div class="cue-line">💬 "פתחי מהירך – לא מהברך. הסיבוב מגיע מלמעלה"</div>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin:2.5mm 0;">
+
+    <!-- Row 3: 2nd Position (Photo Right aligned with Row 1, Text Left) -->
+    <div style="flex:1; display:flex; flex-direction:row-reverse; align-items:center; gap:5mm;">
+      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:36mm; margin-bottom:0;" id="ph-second" onclick="document.getElementById('ph-second-input').click()">
+        <div class="ph-icon">📷</div>
+        <div class="ph-label">תמונה: Second Position</div>
+        <input type="file" id="ph-second-input" accept="image/*" onchange="loadPhoto(this,'ph-second')">
+      </div>
+      <div class="movement-entry" style="flex:1; margin-bottom:0;">
+        <div class="move-title">עמדה שנייה <span class="move-en">– Second Position (2ème)</span></div>
+        <p><strong>תיאור:</strong> רגליים פתוחות לרוחב (כ-60 ס"מ), אצבעות פתוחות כמו בעמדה הראשונה. הברכיים מיושרות מעל אצבעות הרגליים. בסיס רחב ויציב.</p>
+        <p><strong>שימוש ב-Barre:</strong> Grand Plié, Relevé שני, Tendu לצד, עבודת ירך פנימית.</p>
+        <div class="cue-line">💬 "פתחי את הרגליים – שהברכיים ימשיכו על קו האצבעות"</div>
+      </div>
+    </div>
+
   </div>
   
-  <div class="photo-placeholder" style="height:22mm; margin-bottom:4mm;" id="ph-parallel" onclick="document.getElementById('ph-parallel-input').click()">
-    <div class="ph-icon">📷</div>
-    <div class="ph-label">תמונה: Parallel Position</div>
-    <input type="file" id="ph-parallel-input" accept="image/*" onchange="loadPhoto(this,'ph-parallel')">
-  </div>
-
-  <hr class="divider">
-
-  <!-- 1st Position -->
-  <div class="movement-entry">
-    <div class="move-title">עמדה ראשונה <span class="move-en">– First Position (1ère)</span></div>
-    <p><strong>תיאור:</strong> עקבות צמודות, אצבעות פתוחות ב-45°–90° לכל צד (סיבוב מהירך). הרגליים יוצרות ביחד צורת V. זוהי עמדת הבסיס הקלאסית של הבלט.</p>
-    <p><strong>שימוש ב-Barre:</strong> Plié ראשון, Tendu, Relevé, Rond de Jambe.</p>
-    <div class="cue-line">💬 "פתחי מהירך – לא מהברך. הסיבוב מגיע מלמעלה"</div>
-  </div>
-
-  <div class="photo-placeholder" style="height:22mm; margin-bottom:4mm;" id="ph-first" onclick="document.getElementById('ph-first-input').click()">
-    <div class="ph-icon">📷</div>
-    <div class="ph-label">תמונה: First Position</div>
-    <input type="file" id="ph-first-input" accept="image/*" onchange="loadPhoto(this,'ph-first')">
-  </div>
-
-  <hr class="divider">
-
-  <!-- 2nd Position -->
-  <div class="movement-entry">
-    <div class="move-title">עמדה שנייה <span class="move-en">– Second Position (2ème)</span></div>
-    <p><strong>תיאור:</strong> רגליים פתוחות לרוחב (כ-60 ס"מ), אצבעות פתוחות כמו בעמדה הראשונה. הברכיים מיושרות מעל אצבעות הרגליים. בסיס רחב ויציב.</p>
-    <p><strong>שימוש ב-Barre:</strong> Grand Plié, Relevé שני, Tendu לצד, עבודת ירך פנימית.</p>
-    <div class="cue-line">💬 "פתחי את הרגליים – שהברכיים ימשיכו על קו האצבעות"</div>
-  </div>
-
   <div class="page-footer">
     <span>שירה בוסני | Barre &amp; Ballet</span>
     <span>053-620-7065</span>
