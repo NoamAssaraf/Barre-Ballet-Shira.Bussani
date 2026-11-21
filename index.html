@@ -310,10 +310,18 @@
 <body>
 
 <!-- PRINT BAR -->
-<div class="print-bar">
-  <span>🌸 Barre &amp; Ballet – חוברת השתלמות</span>
-  <button onclick="window.print()">🖨️ הדפסה / PDF</button>
+<div class="print-bar" style="display:flex; justify-content:space-between; align-items:center; max-width:900px; margin:10px auto 4px; padding:4px 16px; background:transparent !important; font-size:12px; color:#7d5649;">
+  <span>Barre &amp; Ballet – מילון מושגים</span>
+  <button onclick="window.print()" style="background:#f6efe9 !important; border:1px solid #c99b88; border-radius:999px; padding:3px 12px; color:#7d5649; font-size:12px; cursor:pointer;">
+    שמירה כ-PDF / הדפסה
+  </button>
 </div>
+
+<style>
+  @media print {
+    .print-bar { display: none !important; }
+  }
+</style>
 
 <!-- ═══════════════════════════════════════════════
      COVER PAGE
@@ -476,13 +484,6 @@
     </div>
   </div>
 
-  <!-- photo placeholder -->
-  <div class="photo-placeholder" style="margin-top:auto; height:28mm;" id="ph-flow" onclick="document.getElementById('ph-flow-input').click()">
-    <div class="ph-icon">📷</div>
-    <div class="ph-label">תמונת שיעור / סטודיו<br>לחצי להוספה</div>
-    <input type="file" id="ph-flow-input" accept="image/*" onchange="loadPhoto(this,'ph-flow')">
-  </div>
-
   <div class="page-footer">
     <span>שירה בוסני | Barre &amp; Ballet</span>
     <span>053-620-7065</span>
@@ -572,10 +573,9 @@
 
     <!-- Row 1: Parallel (Photo Right, Text Left) -->
     <div style="flex:1; display:flex; flex-direction:row-reverse; align-items:center; gap:5mm;">
-      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:36mm; margin-bottom:0;" id="ph-parallel" onclick="document.getElementById('ph-parallel-input').click()">
-        <div class="ph-icon">📷</div>
-        <div class="ph-label">תמונה: Parallel Position</div>
-        <input type="file" id="ph-parallel-input" accept="image/*" onchange="loadPhoto(this,'ph-parallel')">
+      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:39mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-parallel" onclick="document.getElementById('ph-parallel-input').click()">
+        <img src="parallel.jpeg" alt="Parallel Position" style="width:100%; height:100%; object-fit:cover; object-position:center 75%; transform: rotate(-2deg) scale(1.1); display:block;">
+        <input type="file" id="ph-parallel-input" accept="image/*" onchange="loadPhoto(this,'ph-parallel')" style="display:none;">
       </div>
       <div class="movement-entry" style="flex:1; margin-bottom:0;">
         <div class="move-title">עמדה מקבילה (Parallel / Sixth Position) <span class="move-en">– Parallel</span></div>
@@ -589,10 +589,9 @@
 
     <!-- Row 2: 1st Position (Photo Left, Text Right) -->
     <div style="flex:1; display:flex; align-items:center; gap:5mm;">
-      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:36mm; margin-bottom:0;" id="ph-first" onclick="document.getElementById('ph-first-input').click()">
-        <div class="ph-icon">📷</div>
-        <div class="ph-label">תמונה: First Position</div>
-        <input type="file" id="ph-first-input" accept="image/*" onchange="loadPhoto(this,'ph-first')">
+      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:39mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-first" onclick="document.getElementById('ph-first-input').click()">
+        <img src="first-leg.jpeg" alt="First Position" style="width:100%; height:100%; object-fit:cover; object-position:center 95%; transform:  scale(1.1); display:block;">
+        <input type="file" id="ph-first-input" accept="image/*" onchange="loadPhoto(this,'ph-first')" style="display:none;">
       </div>
       <div class="movement-entry" style="flex:1; margin-bottom:0;">
         <div class="move-title">עמדה ראשונה <span class="move-en">– First Position (1ère)</span></div>
@@ -607,9 +606,8 @@
     <!-- Row 3: 2nd Position (Photo Right aligned with Row 1, Text Left) -->
     <div style="flex:1; display:flex; flex-direction:row-reverse; align-items:center; gap:5mm;">
       <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:36mm; margin-bottom:0;" id="ph-second" onclick="document.getElementById('ph-second-input').click()">
-        <div class="ph-icon">📷</div>
-        <div class="ph-label">תמונה: Second Position</div>
-        <input type="file" id="ph-second-input" accept="image/*" onchange="loadPhoto(this,'ph-second')">
+        <img src="second-legs.jpeg" alt="Second Position" style="width:100%; height:100%; object-fit:cover; object-position:center 65%; transform:rotate(-3.5deg) scale(1.05); display:block;">
+        <input type="file" id="ph-second-input" accept="image/*" onchange="loadPhoto(this,'ph-second')" style="display:none;">
       </div>
       <div class="movement-entry" style="flex:1; margin-bottom:0;">
         <div class="move-title">עמדה שנייה <span class="move-en">– Second Position (2ème)</span></div>
@@ -620,7 +618,7 @@
     </div>
 
   </div>
-  
+
   <div class="page-footer">
     <span>שירה בוסני | Barre &amp; Ballet</span>
     <span>053-620-7065</span>
@@ -643,38 +641,79 @@
   <h2 style="font-size:17px; margin-bottom:1mm;">תנועות הבסיס</h2>
   <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4mm; text-transform:uppercase;">Foundational Movements</p>
 
-  <!-- Plié -->
-  <div class="movement-entry">
+    <!-- Top Row: 4 Movement Images (Right to Left: Relevé, Tendu, Plié, Grand Plié) -->
+  <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:3.5mm; margin-bottom:4mm;">
+    <!-- 1. Relevé / Élevé -->
+    <div style="display:flex; flex-direction:column; gap:1.5mm;">
+      <div class="photo-placeholder" style="width:100%; height:30mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-releve" onclick="document.getElementById('ph-releve-input').click()">
+        <img src="releve.jpeg" alt="Relevé / Élevé" style="width:100%; height:100%; object-fit:cover; object-position:center 70%; transform: scale(1); display:block;">
+        <input type="file" id="ph-releve-input" accept="image/*" onchange="loadPhoto(this,'ph-releve')" style="display:none;">
+      </div>
+      <div style="font-size:10px; font-weight:700; text-align:center; color:#5e4b43;">Relevé</div>
+    </div>
+
+    <!-- 2. Tendu -->
+    <div style="display:flex; flex-direction:column; gap:1.5mm;">
+      <div class="photo-placeholder" style="width:100%; height:30mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-tendu" onclick="document.getElementById('ph-tendu-input').click()">
+        <img src="tondo.jpeg" alt="Tendu" style="width:100%; height:100%; object-fit:cover; object-position:center 55%; transform: scale(1); display:block;">
+        <input type="file" id="ph-tendu-input" accept="image/*" onchange="loadPhoto(this,'ph-tendu')" style="display:none;">
+      </div>
+      <div style="font-size:10px; font-weight:700; text-align:center; color:#5e4b43;">Tendu</div>
+    </div>
+
+    <!-- 3. Plié -->
+    <div style="display:flex; flex-direction:column; gap:1.5mm;">
+      <div class="photo-placeholder" style="width:100%; height:30mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-plie" onclick="document.getElementById('ph-plie-input').click()">
+        <img src="plie.jpeg" alt="Plié" style="width:100%; height:100%; object-fit:cover; object-position:center 65%; transform: scale(1); display:block;">
+        <input type="file" id="ph-plie-input" accept="image/*" onchange="loadPhoto(this,'ph-plie')" style="display:none;">
+      </div>
+      <div style="font-size:10px; font-weight:700; text-align:center; color:#5e4b43;">Plié</div>
+    </div>
+
+    <!-- 4. Grand Plié -->
+    <div style="display:flex; flex-direction:column; gap:1.5mm;">
+      <div class="photo-placeholder" style="width:100%; height:30mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-grand-plie" onclick="document.getElementById('ph-grand-plie-input').click()">
+        <img src="gplie.jpeg" alt="Grand Plié" style="width:100%; height:100%; object-fit:cover; object-position:center 70%; transform: scale(1); display:block;">
+        <input type="file" id="ph-grand-plie-input" accept="image/*" onchange="loadPhoto(this,'ph-grand-plie')" style="display:none;">
+      </div>
+      <div style="font-size:10px; font-weight:700; text-align:center; color:#5e4b43;">Grand Plié</div>
+    </div>
+  </div>
+  <hr class="divider" style="margin:2.5mm 0 3mm;">
+
+  <!-- Bottom Section: 4 Movement Explanations in Order -->
+  <!-- 1. Plié -->
+  <div class="movement-entry" style="margin-bottom:2.5mm;">
     <div class="move-title">כיפוף הברכיים <span class="move-en">– Plié (פְּלִיאֵה)</span></div>
     <p><strong>תיאור:</strong> כיפוף ברכיים בזמן שהגב נשאר ישר ועצם השת מכוונת ישר מטה. <em>Demi-Plié</em> – כיפוף חלקי; <em>Grand Plié</em> – כיפוף מלא עד מקסימום.</p>
     <p><strong>שרירים:</strong> Quadriceps, Hamstrings, Gluteus, Gastrocnemius (תוך פתיחת ירך).</p>
     <div class="cue-line">💬 "ירדי ישר מטה כמו ליפול בין שתי קירות" / "שמרי על המשקל מחולק שווה"</div>
   </div>
-  
-  <div class="photo-placeholder" style="height:20mm; margin-bottom:3mm;" id="ph-plie" onclick="document.getElementById('ph-plie-input').click()">
-    <div class="ph-icon">📷</div>
-    <div class="ph-label">תמונה: Plié</div>
-    <input type="file" id="ph-plie-input" accept="image/*" onchange="loadPhoto(this,'ph-plie')">
-  </div>
-  <hr class="divider">
 
-  <!-- Relevé / Élevé -->
-  <div class="movement-entry">
+  <hr class="divider" style="margin:2mm 0;">
+
+  <!-- 2. Grand Plié -->
+  <div class="movement-entry" style="margin-bottom:2.5mm;">
+    <div class="move-title">גרנד פליאה <span class="move-en">– Grand Plié (גְּרַנְד פְּלִיאֵה)</span></div>
+    <p><strong>תיאור:</strong> כיפוף ברכיים עמוק ומלא עד טווח התנועה המקסימלי, תוך שמירה על עמוד שדרה זקוף, חזה פתוח וברכיים מיושרות מעל קו אצבעות הרגליים.</p>
+    <p><strong>שרירים:</strong> Gluteus, Quadriceps, Hamstrings, Adductors (ירך פנימית), מייצבי ליבה ואגן.</p>
+    <div class="cue-line">💬 "רדי עמוק ובשליטה – שמרי על גב ארוך וברכיים בדיוק מעל כפות הרגליים"</div>
+  </div>
+
+  <hr class="divider" style="margin:2mm 0;">
+
+  <!-- 3. Relevé / Élevé -->
+  <div class="movement-entry" style="margin-bottom:2.5mm;">
     <div class="move-title">עלייה על קצות האצבעות <span class="move-en">– Relevé / Élevé</span></div>
     <p><strong>תיאור:</strong> הרמת העקבות מהרצפה לעמידה על כרית האצבעות (<em>Demi-Pointe</em>). <em>Relevé</em> – עלייה מ-Plié; <em>Élevé</em> – עלייה מרגליים ישרות.</p>
     <p><strong>שרירים:</strong> Gastrocnemius, Soleus, שרירי כף הרגל. מחזק קרסוליים ומשפר שיווי משקל.</p>
     <div class="cue-line">💬 "עלי איטית, רדי עוד יותר איטי – תשלטי בירידה"</div>
   </div>
 
-  <div class="photo-placeholder" style="height:20mm; margin-bottom:3mm;" id="ph-releve" onclick="document.getElementById('ph-releve-input').click()">
-    <div class="ph-icon">📷</div>
-    <div class="ph-label">תמונה: Relevé / Élevé</div>
-    <input type="file" id="ph-releve-input" accept="image/*" onchange="loadPhoto(this,'ph-releve')">
-  </div>
-  <hr class="divider">
+  <hr class="divider" style="margin:2mm 0;">
 
-  <!-- Tendu -->
-  <div class="movement-entry">
+  <!-- 4. Tendu -->
+  <div class="movement-entry" style="margin-bottom:0;">
     <div class="move-title">הרחקת רגל מתוחה <span class="move-en">– Tendu (טַנְדוּ)</span></div>
     <p><strong>תיאור:</strong> החלקת הרגל על הרצפה החוצה עד לנגיעת אצבע, תוך שמירה על רגל מתוחה לחלוטין. הרגל הנושאת קבועה ומייצבת. ניתן לכיוונים: קדימה, צד, אחורה.</p>
     <p><strong>שרירים:</strong> Quadriceps, שרירי כף הרגל, Hip Flexors, מייצבי עמוד השדרה.</p>
@@ -703,37 +742,73 @@
   <h2 style="font-size:17px; margin-bottom:1mm;">עבודת ישבן והנפות</h2>
   <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4mm; text-transform:uppercase;">Glute Work &amp; Leg Lifts</p>
 
-  <div class="movement-entry">
-    <div class="move-title">כנף ישבן עם כיפוף ברך <span class="move-en">– Attitude</span></div>
-    <p><strong>תיאור:</strong> הרמת הרגל לכיוון אחורי-צידי עם ברך מכופפת ב-90°. האגן נשאר ישר ומייצב. עבודה עמוקה על Gluteus Medius ו-Maximus.</p>
-    <div class="cue-line">💬 "הרימי את הירך – לא את הגב. שמרי על האגן שקט"</div>
+  <!-- 1. Attitude -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">כנף ישבן עם כיפוף ברך <span class="move-en">– Attitude</span></div>
+      <p><strong>תיאור:</strong> הרמת הרגל לכיוון אחורי-צידי עם ברך מכופפת ב-90°. האגן נשאר ישר ומייצב. עבודה עמוקה על Gluteus Medius ו-Maximus.</p>
+      <div class="cue-line">💬 "הרימי את הירך – לא את הגב. שמרי על האגן שקט"</div>
+    </div>
+    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-attitude" onclick="document.getElementById('ph-attitude-input').click()">
+      <img src="atiDev.jpeg" alt="Attitude" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-attitude-input" accept="image/*" onchange="loadPhoto(this,'ph-attitude')" style="display:none;">
+    </div>
   </div>
-  <hr class="divider">
+  <hr class="divider" style="margin:1.8mm 0;">
 
-  <div class="movement-entry">
-    <div class="move-title">הנפה אחורית <span class="move-en">– Arabesque</span></div>
-    <p><strong>תיאור:</strong> הרחקת הרגל לאחור בקו ישר ומתוח, תוך שמירה על גוף ישר ואגן מאוזן. ב-Barre מבצעים Arabesque Lift עם Pulse קטן.</p>
-    <div class="cue-line">💬 "הארכי את הרגל הרחק ממך – חשבי על אורך, לא על גובה"</div>
+  <!-- 2. Arabesque -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">הנפה אחורית <span class="move-en">– Arabesque</span></div>
+      <p><strong>תיאור:</strong> הרחקת הרגל לאחור בקו ישר ומתוח, תוך שמירה על גוף ישר ואגן מאוזן. ב-Barre מבצעים Arabesque Lift עם Pulse קטן.</p>
+      <div class="cue-line">💬 "הארכי את הרגל הרחק ממך – חשבי על אורך, לא על גובה"</div>
+    </div>
+    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-arabesque" onclick="document.getElementById('ph-arabesque-input').click()">
+      <img src="arabesk.jpeg" alt="Arabesque" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-arabesque-input" accept="image/*" onchange="loadPhoto(this,'ph-arabesque')" style="display:none;">
+    </div>
   </div>
-  <hr class="divider">
+  <hr class="divider" style="margin:1.8mm 0;">
 
-  <div class="movement-entry">
-    <div class="move-title">הרמת ברך עגולה <span class="move-en">– Passé (Retiré)</span></div>
-    <p><strong>תיאור:</strong> הרמת ברך לגובה עם כיפוף הרגל עד שאצבעות הרגל מגעות מתחת לברך הנושאת (עמדת Retiré). מחזק Hip Flexors, Quadriceps ומייצבי קרסול.</p>
-    <div class="cue-line">💬 "ברך גבוהה, כף רגל מכוונת – כמו שאת שומרת מטבע בין הרגל לברך"</div>
+  <!-- 3. Passé (Retiré) -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">הרמת ברך עגולה <span class="move-en">– Passé (Retiré)</span></div>
+      <p><strong>תיאור:</strong> הרמת ברך לגובה עם כיפוף הרגל עד שאצבעות הרגל מגעות מתחת לברך הנושאת (עמדת Retiré). מחזק Hip Flexors, Quadriceps ומייצבי קרסול.</p>
+      <div class="cue-line">💬 "ברך גבוהה, כף רגל מכוונת – כמו שאת שומרת מטבע בין הרגל לברך"</div>
+    </div>
+    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-passe" onclick="document.getElementById('ph-passe-input').click()">
+      <img src="passe-retire.jpeg" alt="Passé (Retiré)" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-passe-input" accept="image/*" onchange="loadPhoto(this,'ph-passe')" style="display:none;">
+    </div>
   </div>
-  <hr class="divider">
+  <hr class="divider" style="margin:1.8mm 0;">
 
-  <div class="movement-entry">
-    <div class="move-title">הנפה מלאה <span class="move-en">– Grand Battement</span></div>
-    <p><strong>תיאור:</strong> הנפת הרגל גבוה (90° ומעלה) בתנועה מהירה ומבוקרת. מתחילים ב-Tendu ומסיימים בירידה מבוקרת. לכיוונים: קדימה, צד, אחורה.</p>
-    <div class="cue-line">💬 "הרגל קופצת – הגוף שקט. עלי מהר, רדי לאט"</div>
+  <!-- 4. Dégagé -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">החלקה מהירה <span class="move-en">– Dégagé (דֶּגָּאזֵ')</span></div>
+      <p><strong>תיאור:</strong> כמו Tendu אך עם הרמה קלה מהרצפה (5–10 ס"מ). תנועה מהירה ומדויקת בכל הכיוונים. מפתחת את מהירות שרירי כף הרגל וקואורדינציה.</p>
+      <div class="cue-line">💬 "פרחי מהרצפה בדיוק ברגע האחרון – כמו שאת מנערת טיפה מהרגל"</div>
+    </div>
+    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-degage" onclick="document.getElementById('ph-degage-input').click()">
+      <img src="degaze.jpeg" alt="Dégagé" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-degage-input" accept="image/*" onchange="loadPhoto(this,'ph-degage')" style="display:none;">
+    </div>
   </div>
+  <hr class="divider" style="margin:1.8mm 0;">
 
-  <div class="photo-placeholder" style="margin-top:auto; height:28mm;" id="ph-glute" onclick="document.getElementById('ph-glute-input').click()">
-    <div class="ph-icon">📷</div>
-    <div class="ph-label">תמונות עבודת ישבן / הנפות</div>
-    <input type="file" id="ph-glute-input" accept="image/*" onchange="loadPhoto(this,'ph-glute')">
+  <!-- 5. Cambré -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:0;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">קשת עמוד השדרה <span class="move-en">– Cambré</span></div>
+      <p><strong>תיאור:</strong> כיפוף עמוד השדרה לאחור (<em>back bend</em>) או לצדדים מעמדת עמידה. מתחיל מהיציבה, מרחיב את הפלג העליון ומשחרר את עמוד השדרה. ב-Barre משמש לקירור ומתיחה.</p>
+      <div class="cue-line">💬 "פתחי את הלב לתקרה – הראש הוא האחרון ללכת לאחור"</div>
+    </div>
+    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-cambre" onclick="document.getElementById('ph-cambre-input').click()">
+      <img src="combre.jpeg" alt="Cambré" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-cambre-input" accept="image/*" onchange="loadPhoto(this,'ph-cambre')" style="display:none;">
+    </div>
   </div>
 
   <div class="page-footer">
