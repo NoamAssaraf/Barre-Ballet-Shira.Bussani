@@ -566,7 +566,7 @@
 
   <div class="accent-bar"></div>
   <h2 style="font-size:17px; margin-bottom:1mm;">עמדות המוצא</h2>
-  <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4mm; text-transform:uppercase;">Positions of the Feet</p>
+  <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4mm; text-transform:uppercase;">Feet Positions</p>
 
   <!-- Full-height container for all 3 positions -->
   <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between;">
@@ -628,13 +628,180 @@
 
 
 <!-- ═══════════════════════════════════════════════
-     PAGE 5 – תנועות בסיס
+     PAGE 5 – תנועות דינמיות ושליטה
 ════════════════════════════════════════════════ -->
 <div class="page">
 <div class="page-inner">
   <div class="page-header">
     <span class="brand">מילון מושגי הבלט</span>
     <span class="page-num">5</span>
+  </div>
+
+  <div class="accent-bar"></div>
+  <h2 style="font-size:17px; margin-bottom:1mm;">עמדות המוצא</h2>
+  <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4mm; text-transform:uppercase;">Feet Positions</p>
+
+  <!-- Full-height container for all 3 positions -->
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+<!-- Row 1: 3rd Position (Photo Right, Text Left) -->
+    <div style="flex:1; display:flex; flex-direction:row-reverse; align-items:center; gap:5mm;">
+      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:39mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-third" onclick="document.getElementById('ph-third-input').click()">
+        <img src="xxx-third-position.jpeg" alt="Third Position" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <input type="file" id="ph-third-input" accept="image/*" onchange="loadPhoto(this,'ph-third')" style="display:none;">
+      </div>
+      <div class="movement-entry" style="flex:1; margin-bottom:0;">
+        <div class="move-title">עמדה שלישית <span class="move-en">– Third Position (3ème)</span></div>
+        <p><strong>תיאור:</strong> שתי הרגליים פתוחות החוצה מהירך, כאשר עקב הרגל הקדמית ממוקם סמוך לאמצע/קשת כף הרגל האחורית. משמשת כגשר יציב בדרך לעמדה חמישית תוך שמירה על יישור זהה בשתי הרגליים.</p>
+        <p><strong>שימוש ב-Barre:</strong> חיזוק יישור ואיזון, Plié ו-Relevé בסיסיים, תרגול שליטה ופתיחה מבוקרת של הירך.</p>
+        <div class="cue-line">💬 "שמרי על סיבוב שווה בשתי הירכיים והוליכי את הברכיים ישר מעל קו האצבעות"</div>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin:2.5mm 0;">
+
+    <!-- Row 2: 4th Position (Photo Left, Text Right) -->
+    <div style="flex:1; display:flex; align-items:center; gap:5mm;">
+      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:39mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-fourth" onclick="document.getElementById('ph-fourth-input').click()">
+        <img src="xxx-fourth-position.jpeg" alt="Fourth Position" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <input type="file" id="ph-fourth-input" accept="image/*" onchange="loadPhoto(this,'ph-fourth')" style="display:none;">
+      </div>
+      <div class="movement-entry" style="flex:1; margin-bottom:0;">
+        <div class="move-title">עמדה רביעית <span class="move-en">– Fourth Position (4ème)</span></div>
+        <p><strong>תיאור:</strong> רגל אחת לפנים ורגל אחת לאחור במרחק של ככף רגל ביניהן, כששתיהן פתוחות החוצה מהירך (בעמדה מוצלבת עקב הרגל הקדמית מול אצבעות הרגל האחורית).</p>
+        <p><strong>שימוש ב-Barre:</strong> עבודת יציבות ושיווי משקל, Plié עמוק, הכנה לתנועות סיבוב (Pirouette) ושליטה במרכז הכובד.</p>
+        <div class="cue-line">💬 "חלקי את המשקל שווה בין שתי הרגליים – אל תישעני קדימה או אחורה"</div>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin:2.5mm 0;">
+
+    <!-- Row 3: 5th Position (Photo Right aligned with Row 1, Text Left) -->
+    <div style="flex:1; display:flex; flex-direction:row-reverse; align-items:center; gap:5mm;">
+      <div class="photo-placeholder" style="width:52mm; min-width:52mm; height:36mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-fifth" onclick="document.getElementById('ph-fifth-input').click()">
+        <img src="xxx-fifth-position.jpeg" alt="Fifth Position" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <input type="file" id="ph-fifth-input" accept="image/*" onchange="loadPhoto(this,'ph-fifth')" style="display:none;">
+      </div>
+      <div class="movement-entry" style="flex:1; margin-bottom:0;">
+        <div class="move-title">עמדה חמישית <span class="move-en">– Fifth Position (5ème)</span></div>
+        <p><strong>תיאור:</strong> הרגליים סגורות ומוצלבות בפתיחה מהירך כך שעקב הרגל הקדמית פוגש את קדמת/אצבעות כף הרגל האחורית. עמדה הדוקה ומאתגרת יותר לדיוק ולייצוב.</p>
+        <p><strong>שימוש ב-Barre:</strong> נקודת מוצא וסיום קלאסית ל-Tendu, Dégagé, Plié ו-Relevé הדורשת עבודת ליבה, ירכיים וירך פנימית.</p>
+        <div class="cue-line">💬 "התארכי למעלה מתוך מרכז הגוף ושמרי על פתיחה אמיתית מהירך בלי להעמיס על הברכיים"</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>שירה בוסני | Barre &amp; Ballet</span>
+    <span>053-620-7065</span>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     PAGE 6 – קואורדינציה, אירובי ושחרור
+════════════════════════════════════════════════ -->
+<div class="page">
+<div class="page-inner">
+  <div class="page-header">
+    <span class="brand">מילון מושגי הבלט</span>
+    <span class="page-num">6</span>
+  </div>
+
+  <div class="accent-bar"></div>
+  <h2 style="font-size:17px; margin-bottom:1mm;">עמידות מוצא - ידיים</h2>
+  <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4.5mm; text-transform:uppercase;">Arm Positions &amp; Port de Bras</p>
+
+  <!-- 1. Bras Bas -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">ברבה <span class="move-en">– Bras Bas (עמדת מוצא נמוכה)</span></div>
+      <p><strong>תיאור:</strong> הזרועות יורדות מטה ועגולות בעדינות לפנים, כפות הידיים מעט מעל קו הירכיים/האגן עם מרפקים רכים ומעוגלים ומרווח קל בין כפות הידיים.</p>
+      <p><strong>שימוש ב-Barre:</strong> עמדת פתיחה וסגירה קלאסית לתרגילי בר, שומרת על שכמות רגועות ומרכז אסוף.</p>
+      <div class="cue-line">💬 "שכמות שוקעות מטה, ידיים רכות ועגולות – בלי להצמיד את המרפקים לגוף"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-bras-bas" onclick="document.getElementById('ph-bras-bas-input').click()">
+      <img src="xxx-bras-bas.jpeg" alt="Bras Bas" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-bras-bas-input" accept="image/*" onchange="loadPhoto(this,'ph-bras-bas')" style="display:none;">
+    </div>
+  </div>
+  <hr class="divider" style="margin:2.8mm 0;">
+
+  <!-- 2. 1st Position Arms (En Avant) -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">עמידה ראשונה <span class="move-en">– 1st Position / En Avant</span></div>
+      <p><strong>תיאור:</strong> הזרועות מורמות לפנים בגובה הסרעפת/חזה תחתון בקו מעוגל ואחיד, מרפקים מוחזקים מעט מעל פרק כף היד ואצבעות רכות הפונות זו מול זו.</p>
+      <p><strong>שימוש ב-Barre:</strong> תנועה מרכזית ב-Port de Bras, חיבור לשיווי משקל ולשליטה בפלג הגוף העליון בזמן Plié או Relevé.</p>
+      <div class="cue-line">💬 "דמייני חיבוק עגול ופתוח מול החזה – מרפקים תומכים והכתפיים נשארות למטה"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-arm-1st" onclick="document.getElementById('ph-arm-1st-input').click()">
+      <img src="xxx-arm-first.jpeg" alt="1st Position Arms" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-arm-1st-input" accept="image/*" onchange="loadPhoto(this,'ph-arm-1st')" style="display:none;">
+    </div>
+  </div>
+  <hr class="divider" style="margin:2.8mm 0;">
+
+  <!-- 3. 2nd Position Arms (À la Seconde) -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">עמידה שנייה <span class="move-en">– 2nd Position / À la Seconde</span></div>
+      <p><strong>תיאור:</strong> הזרועות נפתחות לצדדים מעט מתחת לקו הכתפיים בקשת רכה, כפות הידיים פונות קדימה-מעלה והמרפקים מעוגלים קלות תוך שמירה על רוחב בשכמות.</p>
+      <p><strong>שימוש ב-Barre:</strong> פתיחת בית החזה, איזון מול הבר או בעבודה חופשית, וליווי של Tendu לצד, Rond de Jambe ו-Balance.</p>
+      <div class="cue-line">💬 "האריכי מהגב אל קצות האצבעות – רחב ופתוח, בלי לנעול מרפקים או להרים כתפיים"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-arm-2nd" onclick="document.getElementById('ph-arm-2nd-input').click()">
+      <img src="xxx-arm-second.jpeg" alt="2nd Position Arms" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-arm-2nd-input" accept="image/*" onchange="loadPhoto(this,'ph-arm-2nd')" style="display:none;">
+    </div>
+  </div>
+  <hr class="divider" style="margin:2.8mm 0;">
+
+  <!-- 4. 3rd Position Arms -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">עמידה שלישית <span class="move-en">– 3rd Position</span></div>
+      <p><strong>תיאור:</strong> עמדת מעבר שבה זרוע אחת מוחזקת לפנים (בדומה לעמידה ראשונה) והזרוע השנייה נפתחת לצד (בדומה לעמידה שנייה), תוך שמירה על קו רך ורציף בין שתי הזרועות.</p>
+      <p><strong>שימוש ב-Barre:</strong> מעבר מדויק בין עמדות ידיים בקומבינציות, עבודת קואורדינציה והחזקת יציבה מאוזנת בפלג העליון.</p>
+      <div class="cue-line">💬 "שמרי על רצף תנועה חלק בין שתי הזרועות – כל יד יודעת את הקו שלה בלי להכביד על הצוואר"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-arm-3rd" onclick="document.getElementById('ph-arm-3rd-input').click()">
+      <img src="xxx-arm-third.jpeg" alt="3rd Position Arms" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-arm-3rd-input" accept="image/*" onchange="loadPhoto(this,'ph-arm-3rd')" style="display:none;">
+    </div>
+  </div>
+  <hr class="divider" style="margin:2.8mm 0;">
+
+  <!-- 5. 5th Position Arms (En Haut) -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">עמידה חמישית <span class="move-en">– 5th Position / En Haut</span></div>
+      <p><strong>תיאור:</strong> הזרועות עולות מעל הראש בקו עגול ורך מעט לפנים מקו המצח כך שהן נשארות בטווח הראייה העליון, מרפקים מעוגלים והכתפיים מונחות מטה.</p>
+      <p><strong>שימוש ב-Barre:</strong> יצירת קו אנכי ארוך ויציב, חיזוק שליטה בשכמות ובליבה ותרגול סיומות או הרמות מאוזנות.</p>
+      <div class="cue-line">💬 "התארכי מעלה מתוך הצלעות והגב – הכתפיים נשארות רפויות והידיים רכות מעל הראש"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-arm-5th" onclick="document.getElementById('ph-arm-5th-input').click()">
+      <img src="xxx-arm-fifth.jpeg" alt="5th Position Arms" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-arm-5th-input" accept="image/*" onchange="loadPhoto(this,'ph-arm-5th')" style="display:none;">
+    </div>
+  </div>
+
+  <div class="page-footer" style="margin-top:auto;">
+    <span>שירה בוסני | Barre &amp; Ballet</span>
+    <span>053-620-7065</span>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     PAGE 7 – תנועות בסיס
+════════════════════════════════════════════════ -->
+<div class="page">
+<div class="page-inner">
+  <div class="page-header">
+    <span class="brand">מילון מושגי הבלט</span>
+    <span class="page-num">7</span>
   </div>
 
   <div class="accent-bar"></div>
@@ -655,7 +822,7 @@
     <!-- 2. Tendu -->
     <div style="display:flex; flex-direction:column; gap:1.5mm;">
       <div class="photo-placeholder" style="width:100%; height:30mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-tendu" onclick="document.getElementById('ph-tendu-input').click()">
-        <img src="tondo.jpeg" alt="Tendu" style="width:100%; height:100%; object-fit:cover; object-position:center 55%; transform: scale(1); display:block;">
+        <img src="tondo.jpeg" alt="Tendu" style="width:100%; height:100%; object-fit:cover; object-position:center 90%; transform: scale(1); display:block;">
         <input type="file" id="ph-tendu-input" accept="image/*" onchange="loadPhoto(this,'ph-tendu')" style="display:none;">
       </div>
       <div style="font-size:10px; font-weight:700; text-align:center; color:#5e4b43;">Tendu</div>
@@ -729,147 +896,7 @@
 
 
 <!-- ═══════════════════════════════════════════════
-     PAGE 6 – עבודת ישבן והנפות
-════════════════════════════════════════════════ -->
-<div class="page">
-<div class="page-inner">
-  <div class="page-header">
-    <span class="brand">מילון מושגי הבלט</span>
-    <span class="page-num">6</span>
-  </div>
-
-  <div class="accent-bar"></div>
-  <h2 style="font-size:17px; margin-bottom:1mm;">עבודת ישבן והנפות</h2>
-  <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4mm; text-transform:uppercase;">Glute Work &amp; Leg Lifts</p>
-
-  <!-- 1. Attitude -->
-  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2mm;">
-    <div class="movement-entry" style="flex:1; margin-bottom:0;">
-      <div class="move-title">כנף ישבן עם כיפוף ברך <span class="move-en">– Attitude</span></div>
-      <p><strong>תיאור:</strong> הרמת הרגל לכיוון אחורי-צידי עם ברך מכופפת ב-90°. האגן נשאר ישר ומייצב. עבודה עמוקה על Gluteus Medius ו-Maximus.</p>
-      <div class="cue-line">💬 "הרימי את הירך – לא את הגב. שמרי על האגן שקט"</div>
-    </div>
-    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-attitude" onclick="document.getElementById('ph-attitude-input').click()">
-      <img src="atiDev.jpeg" alt="Attitude" style="width:100%; height:100%; object-fit:cover; display:block;">
-      <input type="file" id="ph-attitude-input" accept="image/*" onchange="loadPhoto(this,'ph-attitude')" style="display:none;">
-    </div>
-  </div>
-  <hr class="divider" style="margin:1.8mm 0;">
-
-  <!-- 2. Arabesque -->
-  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2mm;">
-    <div class="movement-entry" style="flex:1; margin-bottom:0;">
-      <div class="move-title">הנפה אחורית <span class="move-en">– Arabesque</span></div>
-      <p><strong>תיאור:</strong> הרחקת הרגל לאחור בקו ישר ומתוח, תוך שמירה על גוף ישר ואגן מאוזן. ב-Barre מבצעים Arabesque Lift עם Pulse קטן.</p>
-      <div class="cue-line">💬 "הארכי את הרגל הרחק ממך – חשבי על אורך, לא על גובה"</div>
-    </div>
-    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-arabesque" onclick="document.getElementById('ph-arabesque-input').click()">
-      <img src="arabesk.jpeg" alt="Arabesque" style="width:100%; height:100%; object-fit:cover; display:block;">
-      <input type="file" id="ph-arabesque-input" accept="image/*" onchange="loadPhoto(this,'ph-arabesque')" style="display:none;">
-    </div>
-  </div>
-  <hr class="divider" style="margin:1.8mm 0;">
-
-  <!-- 3. Passé (Retiré) -->
-  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2mm;">
-    <div class="movement-entry" style="flex:1; margin-bottom:0;">
-      <div class="move-title">הרמת ברך עגולה <span class="move-en">– Passé (Retiré)</span></div>
-      <p><strong>תיאור:</strong> הרמת ברך לגובה עם כיפוף הרגל עד שאצבעות הרגל מגעות מתחת לברך הנושאת (עמדת Retiré). מחזק Hip Flexors, Quadriceps ומייצבי קרסול.</p>
-      <div class="cue-line">💬 "ברך גבוהה, כף רגל מכוונת – כמו שאת שומרת מטבע בין הרגל לברך"</div>
-    </div>
-    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-passe" onclick="document.getElementById('ph-passe-input').click()">
-      <img src="passe-retire.jpeg" alt="Passé (Retiré)" style="width:100%; height:100%; object-fit:cover; display:block;">
-      <input type="file" id="ph-passe-input" accept="image/*" onchange="loadPhoto(this,'ph-passe')" style="display:none;">
-    </div>
-  </div>
-  <hr class="divider" style="margin:1.8mm 0;">
-
-  <!-- 4. Dégagé -->
-  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2mm;">
-    <div class="movement-entry" style="flex:1; margin-bottom:0;">
-      <div class="move-title">החלקה מהירה <span class="move-en">– Dégagé (דֶּגָּאזֵ')</span></div>
-      <p><strong>תיאור:</strong> כמו Tendu אך עם הרמה קלה מהרצפה (5–10 ס"מ). תנועה מהירה ומדויקת בכל הכיוונים. מפתחת את מהירות שרירי כף הרגל וקואורדינציה.</p>
-      <div class="cue-line">💬 "פרחי מהרצפה בדיוק ברגע האחרון – כמו שאת מנערת טיפה מהרגל"</div>
-    </div>
-    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-degage" onclick="document.getElementById('ph-degage-input').click()">
-      <img src="degaze.jpeg" alt="Dégagé" style="width:100%; height:100%; object-fit:cover; display:block;">
-      <input type="file" id="ph-degage-input" accept="image/*" onchange="loadPhoto(this,'ph-degage')" style="display:none;">
-    </div>
-  </div>
-  <hr class="divider" style="margin:1.8mm 0;">
-
-  <!-- 5. Cambré -->
-  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:0;">
-    <div class="movement-entry" style="flex:1; margin-bottom:0;">
-      <div class="move-title">קשת עמוד השדרה <span class="move-en">– Cambré</span></div>
-      <p><strong>תיאור:</strong> כיפוף עמוד השדרה לאחור (<em>back bend</em>) או לצדדים מעמדת עמידה. מתחיל מהיציבה, מרחיב את הפלג העליון ומשחרר את עמוד השדרה. ב-Barre משמש לקירור ומתיחה.</p>
-      <div class="cue-line">💬 "פתחי את הלב לתקרה – הראש הוא האחרון ללכת לאחור"</div>
-    </div>
-    <div class="photo-placeholder" style="width:32mm; min-width:32mm; height:22mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-cambre" onclick="document.getElementById('ph-cambre-input').click()">
-      <img src="combre.jpeg" alt="Cambré" style="width:100%; height:100%; object-fit:cover; display:block;">
-      <input type="file" id="ph-cambre-input" accept="image/*" onchange="loadPhoto(this,'ph-cambre')" style="display:none;">
-    </div>
-  </div>
-
-  <div class="page-footer">
-    <span>שירה בוסני | Barre &amp; Ballet</span>
-    <span>053-620-7065</span>
-  </div>
-</div>
-</div>
-
-
-<!-- ═══════════════════════════════════════════════
-     PAGE 7 – תנועות דינמיות ושליטה
-════════════════════════════════════════════════ -->
-<div class="page">
-<div class="page-inner">
-  <div class="page-header">
-    <span class="brand">מילון מושגי הבלט</span>
-    <span class="page-num">7</span>
-  </div>
-
-  <div class="accent-bar"></div>
-  <h2 style="font-size:17px; margin-bottom:1mm;">תנועות דינמיות ושליטה</h2>
-  <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4mm; text-transform:uppercase;">Dynamic Movements &amp; Control</p>
-
-  <div class="movement-entry">
-    <div class="move-title">החלקה מהירה <span class="move-en">– Dégagé (דֶּגָּאזֵ')</span></div>
-    <p><strong>תיאור:</strong> כמו Tendu אך עם הרמה קלה מהרצפה (5–10 ס"מ). תנועה מהירה ומדויקת בכל הכיוונים. מפתחת את מהירות שרירי כף הרגל וקואורדינציה.</p>
-    <div class="cue-line">💬 "פרחי מהרצפה בדיוק ברגע האחרון – כמו שאת מנערת טיפה מהרגל"</div>
-  </div>
-  <hr class="divider">
-
-  <div class="movement-entry">
-    <div class="move-title">מעגל מהרגל <span class="move-en">– Rond de Jambe (רוֹן דֶה זֶ'אמְב)</span></div>
-    <p><strong>תיאור:</strong> תנועה סיבובית של הרגל על הרצפה (<em>à terre</em>) או באוויר (<em>en l'air</em>). עם כיוון השעון (<em>en dehors</em>) או נגדו (<em>en dedans</em>). מפתח גמישות ירך ותיאום.</p>
-    <div class="cue-line">💬 "ציירי מחצית עיגול מושלם – מקדימה, לצד, לאחורה"</div>
-  </div>
-  <hr class="divider">
-
-  <div class="movement-entry">
-    <div class="move-title">המסה – הרמה עם כיפוף <span class="move-en">– Fondu (פוֹנְדוּ)</span></div>
-    <p><strong>תיאור:</strong> כיפוף שתי הרגליים בו-זמנית עם ירידה מדורגת ועלייה חלקה. <em>Fondu</em> = "להמס" בצרפתית. הרגל הנשלחת מתחילה בנקודת Retiré ונפתחת בעלייה.</p>
-    <div class="cue-line">💬 "המסי לתוך הרצפה כמו שוקולד חם – לאט, בשליטה מלאה"</div>
-  </div>
-  <hr class="divider">
-
-  <div class="photo-placeholder" style="height:28mm; margin-top:3mm;" id="ph-dynamic" onclick="document.getElementById('ph-dynamic-input').click()">
-    <div class="ph-icon">📷</div>
-    <div class="ph-label">תמונות תנועות דינמיות</div>
-    <input type="file" id="ph-dynamic-input" accept="image/*" onchange="loadPhoto(this,'ph-dynamic')">
-  </div>
-
-  <div class="page-footer">
-    <span>שירה בוסני | Barre &amp; Ballet</span>
-    <span>053-620-7065</span>
-  </div>
-</div>
-</div>
-
-
-<!-- ═══════════════════════════════════════════════
-     PAGE 8 – קואורדינציה, אירובי ושחרור
+     PAGE 8 – עבודת ישבן והנפות
 ════════════════════════════════════════════════ -->
 <div class="page">
 <div class="page-inner">
@@ -879,37 +906,79 @@
   </div>
 
   <div class="accent-bar"></div>
-  <h2 style="font-size:17px; margin-bottom:1mm;">קואורדינציה, אירובי ושחרור</h2>
-  <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4mm; text-transform:uppercase;">Coordination, Cardio &amp; Release</p>
+  <h2 style="font-size:17px; margin-bottom:1mm;">עבודת ישבן והנפות</h2>
+  <p style="font-size:9.5px; color:var(--rose); font-weight:600; letter-spacing:1px; margin-bottom:4.5mm; text-transform:uppercase;">Glute Work &amp; Leg Lifts</p>
 
-  <div class="movement-entry">
-    <div class="move-title">עבודת ידיים ועמוד שדרה <span class="move-en">– Port de Bras</span></div>
-    <p><strong>תיאור:</strong> תנועות ידיים מכוונות ומדויקות שמלוות את תנועת הגוף. ב-Barre משמש לאיזון, ביטוי ואסתטיקה. עמדות: <em>Bras Bas, En Avant, à la Seconde, En Haut</em>.</p>
-    <div class="cue-line">💬 "הידיים מתחילות מהגב – לא מהכתפיים. חשבי על רוחב"</div>
+<!-- 1. Attitude -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">כנף ישבן עם כיפוף ברך <span class="move-en">– Attitude</span></div>
+      <p><strong>תיאור:</strong> הרמת הרגל לכיוון אחורי-צידי עם ברך מכופפת ב-90°. האגן נשאר ישר ומייצב. עבודה עמוקה על Gluteus Medius ו-Maximus.</p>
+      <div class="cue-line">💬 "הרימי את הירך – לא את הגב. שמרי על האגן שקט"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-attitude" onclick="document.getElementById('ph-attitude-input').click()">
+      <img src="atiDev.jpeg" alt="Attitude" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-attitude-input" accept="image/*" onchange="loadPhoto(this,'ph-attitude')" style="display:none;">
+    </div>
   </div>
-  <hr class="divider">
+  <hr class="divider" style="margin:2.8mm 0;">
 
-  <div class="movement-entry">
-    <div class="move-title">קפיצה מלאה / חצי קפיצה <span class="move-en">– Sauté / Échappé</span></div>
-    <p><strong>תיאור:</strong> <em>Sauté</em> = קפיצה במקום עם שתי הרגליים. <em>Échappé</em> = קפיצה מעמדה ראשונה לשנייה וחזרה. נחיתה תמיד על כרית האצבעות ואז עקב, ברכיים מכופפות לספוג זעזוע.</p>
-    <div class="cue-line">💬 "קפצי כמו פנינה – נחיתה שקטה כמו על כותנה"</div>
+  <!-- 2. Arabesque -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">הנפה אחורית <span class="move-en">– Arabesque</span></div>
+      <p><strong>תיאור:</strong> הרחקת הרגל לאחור בקו ישר ומתוח, תוך שמירה על גוף ישר ואגן מאוזן. ב-Barre מבצעים Arabesque Lift עם Pulse קטן.</p>
+      <div class="cue-line">💬 "הארכי את הרגל הרחק ממך – חשבי על אורך, לא על גובה"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-arabesque" onclick="document.getElementById('ph-arabesque-input').click()">
+      <img src="arabesk.jpeg" alt="Arabesque" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-arabesque-input" accept="image/*" onchange="loadPhoto(this,'ph-arabesque')" style="display:none;">
+    </div>
   </div>
-  <hr class="divider">
+  <hr class="divider" style="margin:2.8mm 0;">
 
-  <div class="movement-entry">
-    <div class="move-title">קשת עמוד השדרה <span class="move-en">– Cambré</span></div>
-    <p><strong>תיאור:</strong> כיפוף עמוד השדרה לאחור (<em>back bend</em>) או לצדדים מעמדת עמידה. מתחיל מהיציבה, מרחיב את הפלג העליון ומשחרר את עמוד השדרה. ב-Barre משמש לקירור ומתיחה.</p>
-    <div class="cue-line">💬 "פתחי את הלב לתקרה – הראש הוא האחרון ללכת לאחור"</div>
+  <!-- 3. Passé (Retiré) -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">הרמת ברך עגולה <span class="move-en">– Passé (Retiré)</span></div>
+      <p><strong>תיאור:</strong> הרמת ברך לגובה עם כיפוף הרגל עד שאצבעות הרגל מגעות מתחת לברך הנושאת (עמדת Retiré). מחזק Hip Flexors, Quadriceps ומייצבי קרסול.</p>
+      <div class="cue-line">💬 "ברך גבוהה, כף רגל מכוונת – כמו שאת שומרת מטבע בין הרגל לברך"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-passe" onclick="document.getElementById('ph-passe-input').click()">
+<img src="passe-retire.jpeg" alt="Passé (Retiré)" style="width:100%; height:100%; object-fit:cover; object-position:center 40%; transform:scale(1.12) translateX(-8%); display:block;">
+      <input type="file" id="ph-passe-input" accept="image/*" onchange="loadPhoto(this,'ph-passe')" style="display:none;">
+    </div>
   </div>
-  <hr class="divider">
+  <hr class="divider" style="margin:2.8mm 0;">
 
-  <div class="photo-placeholder" style="margin-top:auto; height:30mm;" id="ph-cardio" onclick="document.getElementById('ph-cardio-input').click()">
-    <div class="ph-icon">📷</div>
-    <div class="ph-label">תמונות קפיצות / Port de Bras / Cambré</div>
-    <input type="file" id="ph-cardio-input" accept="image/*" onchange="loadPhoto(this,'ph-cardio')">
+  <!-- 4. Dégagé -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">החלקה מהירה <span class="move-en">– Dégagé (דֶּגָּאזֵ')</span></div>
+      <p><strong>תיאור:</strong> כמו Tendu אך עם הרמה קלה מהרצפה (5–10 ס"מ). תנועה מהירה ומדויקת בכל הכיוונים. מפתחת את מהירות שרירי כף הרגל וקואורדינציה.</p>
+      <div class="cue-line">💬 "פרחי מהרצפה בדיוק ברגע האחרון – כמו שאת מנערת טיפה מהרגל"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-degage" onclick="document.getElementById('ph-degage-input').click()">
+      <img src="degaze.jpeg" alt="Dégagé" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <input type="file" id="ph-degage-input" accept="image/*" onchange="loadPhoto(this,'ph-degage')" style="display:none;">
+    </div>
+  </div>
+  <hr class="divider" style="margin:2.8mm 0;">
+
+  <!-- 5. Cambré -->
+  <div style="display:flex; align-items:center; gap:3.5mm; margin-bottom:2.5mm;">
+    <div class="movement-entry" style="flex:1; margin-bottom:0;">
+      <div class="move-title">קשת עמוד השדרה <span class="move-en">– Cambré</span></div>
+      <p><strong>תיאור:</strong> כיפוף עמוד השדרה לאחור (<em>back bend</em>) או לצדדים מעמדת עמידה. מתחיל מהיציבה, מרחיב את הפלג העליון ומשחרר את עמוד השדרה. ב-Barre משמש לקירור ומתיחה.</p>
+      <div class="cue-line">💬 "פתחי את הלב לתקרה – הראש הוא האחרון ללכת לאחור"</div>
+    </div>
+    <div class="photo-placeholder" style="width:28mm; min-width:28mm; height:25mm; margin-bottom:0; overflow:hidden; padding:0;" id="ph-cambre" onclick="document.getElementById('ph-cambre-input').click()">
+      <img src="combre.jpeg" alt="Cambré" style="width:100%; height:100%; object-fit:cover; transform:scale(1.1); display:block;">
+      <input type="file" id="ph-cambre-input" accept="image/*" onchange="loadPhoto(this,'ph-cambre')" style="display:none;">
+    </div>
   </div>
 
-  <div class="page-footer">
+  <div class="page-footer" style="margin-top:auto;">
     <span>שירה בוסני | Barre &amp; Ballet</span>
     <span>053-620-7065</span>
   </div>
